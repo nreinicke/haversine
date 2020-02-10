@@ -1,10 +1,4 @@
-from cffi import FFI
-ffi = FFI()
-ffi.cdef("""
-    double haversine(double, double, double, double);
-""")
-
-haversine = ffi.dlopen("../target/debug/libhaversine.dylib")
+import haversine
 
 # London
 lat1 = 51.5007

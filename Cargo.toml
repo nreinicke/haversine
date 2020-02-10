@@ -6,8 +6,11 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
 
 [lib]
 name = "haversine"
-crate-type = ["dylib"]
+crate-type = ["cdylib"]
+
+[dependencies.cpython]
+version = "0.4"
+features = ["extension-module"]
